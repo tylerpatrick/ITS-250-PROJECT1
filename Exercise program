@@ -1,23 +1,49 @@
+####ITS Project 1 - Tyler Patrick and Andrew
 def main():
-    exercised = input("Have you exercised today")
-    if exercised == "yes":
+    
+    ##asks user how many hours they have exercised
+    exercised = input("Have you exercised today?")
+    
+    ##determines whether they have inputted yes to continue function
+    if exercised == 'yes':
         print("Way to go!")
     else:
-        print("Thats okay, there's always tomorrow.")
-    if exercised == "yes":
+        print("That's okay, there's always tomorrow!")
+    
+    ##if user says 'yes' it will then ask them how many hours they have
+    ##exercised
+    if exercised == 'yes':
         hoursExercised = float(input("How many hours have you exercised?"))
+
+    ##determines whether or not they have exercised enough and will tell
+    ##them how many more hours they need to workout
     if hoursExercised < 1:
         print("Keep pushing, almost there!")
+        
+    ##if the users input is within the adequate range it tells them 
     if hoursExercised in range(1,3):
         print("WOW! Excellent work today!")
+    ##informs user if they have exercised too much   
     if hoursExercised > 2:
-        print("That sure is a lot, get some rest. Good job!")
+        print("That sure is a lot, make sure to get some rest.")
+
+    ##if they haven't worked out enough it tell them then let them how many more
+    ##hours they need to exercise
     while hoursExercised < 1:
         hoursExercised = 2 - hoursExercised
         print("Only", hoursExercised, "hours to go!")
-    anotherDay = input("Would you like to add another day?")
+
+    ##asks user if they would like to input another day
+    anotherDay = input("Would you like to input another day?")
+
+    ##if the user wants to add another day it calls the main function otherwise
+    ##the function ends
     if anotherDay == "yes":
         main()
-    else: 
+    else:
         print("See you tomorrow!")
 main()
+
+
+ 
+
